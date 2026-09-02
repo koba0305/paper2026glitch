@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# LaTeX build files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# The files in the repository root are only for testing.
+/main.tex
+/main.pdf
+/references.bib
+
+# Keep the actual thesis PDF available from README.
+!/thesis/main.pdf

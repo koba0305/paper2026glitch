@@ -1,0 +1,36 @@
+% !TEX program = lualatex
+\documentclass[a4paper,12pt,report]{jlreq}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none
+]{biblatex}
+
+\graphicspath{{figures/}}
+\addbibresource{references.bib}
+
+\title{卒業論文タイトル}
+\author{小林優芽}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\input{chapters/01_introduction}
+\input{chapters/02_background}
+\input{chapters/03_proposal}
+\input{chapters/04_system}
+\input{chapters/05_preliminary_evaluation}
+\input{chapters/06_improvement}
+\input{chapters/07_evaluation}
+\input{chapters/08_discussion}
+\input{chapters/09_conclusion}
+
+\printbibliography[heading=bibintoc,title={参考文献}]
+
+\end{document}
