@@ -9,3 +9,15 @@
 ## ソースコード
 
 論文のLaTeXソースは [`thesis/`](thesis/) にあります。
+
+## PDFの更新
+
+リポジトリのルートで次を実行します（LuaLaTeX・Biber・latexmkが必要です）。
+
+```sh
+LC_ALL=C latexmk -cd -lualatex -interaction=nonstopmode -halt-on-error thesis/main.tex
+```
+
+latexmkがBiberと必要なLaTeXの再実行を行います。`lualatex` のみの実行では、追加した文献がPDFに反映されないことがあります。
+
+更新後は `thesis/main.log` と `thesis/main.blg` に未解決の引用・文献キーの警告がないことを確認し、ソースと **`thesis/main.pdf` も一緒にコミット・push** してください。上のボタンはGitHubに保存されたPDFを開くため、ソースだけ更新しても表示は変わりません。
